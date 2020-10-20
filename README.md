@@ -1,7 +1,10 @@
 # Project 1
 Phil Abraham
+
 Felipe Ayala
+
 Eve Griggs
+
 Eren Turkmenonglu
 
 ## BlackRock Investments Presents:
@@ -14,27 +17,43 @@ We selected Large to Mega Cap stocks in order to utilize low correlation to a hi
 
 ## Is it possible to outperform the SP500?
 Based on our findings, yes the market can be outperformed. We looked at the following comparisons to determine our performance against the SPY:
-SPY historical vs BLK historical Portfolio
-SPY Sharpe vs BLK Portfolio Sharpe
-SPY 5YR MC Sim vs BLK Portfolio  5YR MC Sim
+
+>>SPY historical vs BLK historical Portfolio
+
+>>SPY Sharpe vs BLK Portfolio Sharpe
+
+>>SPY 5YR MC Sim vs BLK Portfolio  5YR MC Sim
 
 ## What does the selection process look like to create the portfolio?
 Stock Picking Strategies:
+
 Eve: Technology sector reflecting consumer and industry trends. 
+
 Felipe: Large Cap Stocks / consistent history of dividend yield and growth.
+
 Phil: Large Cap and Mega Cap / Financial Services, Consumer Defensive, Tech, Consumer Cyclical. P/E, Beta, Working Capital and EV/EBITDA
+
 Eren: Enterprise Software, Technology, Entertainment, Pharmaceutical. Comparison analysis with peers using fundamental analysis, stocks that are operating in more than a single industry.
-BLK Final Portfolio Composition:
-Select final Stock portfolio by using a High Beta low Correlation Strategy
-Final Portfolio Composition: 40% SPY and 60% BLK Portfolio. 
+
+### BLK Final Portfolio Composition:
+
+### Select final Stock portfolio by using a High Beta low Correlation Strategy
+
+### Final Portfolio Composition: 40% SPY and 60% BLK Portfolio. 
 
 ## How do our applied metrics determine if the portfolio beats the SP500?
 Our goal was to compare historical metrics and run a Monte Carlo Simulation to determine the probability of outperforming the stock market. Below are the selected metrics:
+
 >> Historical Results
+
 >> Daily returns
+
 >> Cumulative Returns
+
 >> Sharpe Ratio
+
 >> 5 yr - MC Simulation: 
+
 >> BLK Portfolio vs SPY
 
 # Understanding the Data: An elaboration on our applied metrics
@@ -43,16 +62,20 @@ Our goal was to compare historical metrics and run a Monte Carlo Simulation to d
 
 From the initial selection of 28 stocks it was neccesary to caculate from the historical data for a five year period (approx 11-2015:11-2020) in order to  compare it to the calculated returns of the SP500. 
 
-![raw portfolio returns](Daily_Returns_of_each_individual_Stock.png)
-![sp500 returns](Daily_Returns_of_SP500.png)
-![histograms raw portfolio x sp500](histogramshistorical.png)
+![raw portfolio returns](./Images/Daily_Returns_of_each_individual_Stock.png)
+
+
+![histograms raw portfolio x sp500](./Images/histogramshistorical.png)
+
 Calculating the covariance and variance for the Initial Portfolio and SP500: 
 
-![covariance image](covariance.png)
-![covariance code](covarianceCode.png)
+![covariance image](./Images/covariance.png)
+
+![covariance code](./Images/covarianceCode.png)
 
 Calculating Beta for Initial portfolio, sorting from lowest to highest:
-![beta](beta.png)
+
+![beta](./Images/beta.png)
 
 Calculating Correlation of Initial portfolio to SP500
 
@@ -60,29 +83,37 @@ Calculating Correlation of Initial portfolio to SP500
 
 ### correlation_of_portfolio
 
-![correlation](fnnBetaRaw.png)
-![correlation table](correlationtable.png)
+![correlation](./Images/fnnBetaRaw.png)
+
+![correlation table](./Images/correlationtable.png)
 
 
 # Final portfolio selection: Low correlation to SP500 and High Beta metric from initial portfolio
 Using the lowest correlation to the market and highest beta from our initial 29 stock portfolio, we preselected 15 stocks. However, as an executive decision, we replaced 2 stocks. We removed PSX and SBUX, and added PFE and COST form our raw portfolio. We wanted to capitalize on Costco’s future growth and reduce all exposure to the Oil Industry Sector. Final stock selection from strategy: 
 AMT, ORCL, PPG, COST, MSFT, UNH, TROW, BLK, NVDA, FB, BABA, CRM, PFE, NFLX, SQ. 
-![portfolio selection](portfolioselection.png)
-![portfolio strategy](portfoliostrategy.png)
+
+![portfolio selection](./Images/portfolioselection.png)
+
+![portfolio strategy](./Images/portfoliostrategy.png)
+
 ### Final BLK Portfolio composition = (40% SPY + 60% BLK Portfolio) Totaling 16 holdings. 
 
 # Data Results and Findings
 
 ## 5 Year MC Simulation Expected Return BLK Port vs SPY
+
 ![MC sim SP500](./CSVs/MonteCarlo_5yrs_SPY_simulation.png)
-![MC sim ](MCsimulationBLK.png)
+
+![MC sim ](./Images/MCsimulationBLK.png)
+
 There is a 95% chance that an initial investment of $10,000 in BKL strategy, will end within the range of $ 19,024.21  and $ 42,326.91. This represents 90.24% to 323.26% return in a 5 year period. 
 There is a 95% chance Expected Return of a $10,000 initial portfolio investing in SPY will end within the range of $ 7,019.96  and $ 38255.93. This represents -29.81% to 282.55% return in a 5 year period. 
 
 ## Sharpe Ratio
-![sharpe ratio](sharperatioBLK_SP500.png)
 
-The sharpe ratio comparisons are favorable for the BLK portfolio, based upon a good ratio above 1, and the SP500 ratio below 1 as sub-optimal.
+![sharpe ratio](./Images/sharperatioBLK_SP500.png)
+
+>>The sharpe ratio comparisons are favorable for the BLK portfolio, based upon a good ratio above 1, and the SP500 ratio below 1 as sub-optimal.
 
 # The goal of our project was to answer the question: Can we beat the market?
 *We used data from open sources as well as API’s to collect the data*. 
