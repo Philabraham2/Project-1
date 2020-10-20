@@ -10,13 +10,19 @@ Eren Turkmenonglu
 ## BlackRock Investments Presents:
 # Beating the SP500, A Million Dollar Selection Process
 
-BlackRock Investments is comprised of learners and stock market enthusiasts. In this project we worked to create a simple yet sophisticated portfolio that could potentially beat the overall Stock Market. 
-We selected Large to Mega Cap stocks in order to utilize low correlation to a high beta to Market relationship.  We forecasted future returns by running a  Monte Carlo Simulation and looking at historical data for a 5-year period.
+BlackRock Investments is comprised of learners and stock market enthusiasts. In this project we worked to create a simple yet sophisticated portfolio that could potentially beat the overall stock market.
+We selected large-cap to mega-cap stocks in order to follow a low market correlation to a high beta strategy.
+We built our portfolio with a systematic stock selection approach and forecasted future returns by running a Monte Carlo Simulation as well as comparing the performance of our portfolio and the benchmark based on 5 years of historical data.
 
 # Key components for selecting a Portfolio which will outperform the SP500
+To create our portfolio which will be compared against the S&P500, each team member has selected some stocks, 28 stocks in total. Then we evaluated them based on their beta and market correlation to keep the most suitable stocks with our portfolio strategy. We kept the stocks yielding the highest outcome of the division of stocks' beta to their market correlation in order to achieve high-beta & low-market correlation stocks.
 
 ## Is it possible to outperform the SP500?
-Based on our findings, yes the market can be outperformed. We looked at the following comparisons to determine our performance against the SPY:
+Based on our 5 years of historical data, the stocks that our team picked outperformed the S&P 500.
+We looked at the following comparisons to determine our portfolio performance against the SPY;
+- Sharpe ratio
+- 5 years of cumulative historical returns
+- 5 years of monte carlo simulation
 
 >>SPY historical vs BLK historical Portfolio
 
@@ -44,24 +50,19 @@ Eren: Enterprise Software, Technology, Entertainment, Pharmaceutical. Comparison
 ## How do our applied metrics determine if the portfolio beats the SP500?
 Our goal was to compare historical metrics and run a Monte Carlo Simulation to determine the probability of outperforming the stock market. Below are the selected metrics:
 
->> Historical Results
+>> 5 yr - Historical Returns
 
->> Daily returns
-
->> Cumulative Returns
-
->> Sharpe Ratio
+>> Sharpe Ratios
 
 >> 5 yr - MC Simulation: 
 
->> BLK Portfolio vs SPY
-
 # Understanding the Data: An elaboration on our applied metrics
 
-## Initial portfolio resulted in 28 stocks selected based on team members' decisions. The selected Portfolio (BLK) is reduced from 29 to 15 stocks by running the following data exploration
+## Initial portfolio resulted in 28 stocks selected based on team members' decisions. The selected Portfolio (BLK) is reduced from 28 to 15 stocks by running the following data exploration
 
-From the initial selection of 28 stocks it was neccesary to caculate from the historical data for a five year period (approx 11-2015:11-2020) in order to  compare it to the calculated returns of the SP500. 
+We calculated the daily return of stocks based on 5 years of historical data (approx 11-2015:11-2020) in order to find their betas and market correlation. 
 
+We used ffn library (https://pypi.org/project/ffn/) to plot histograms of daily returns;
 ![raw portfolio returns](./Images/Daily_Returns_of_each_individual_Stock.png)
 
 
@@ -73,12 +74,10 @@ Calculating the covariance and variance for the Initial Portfolio and SP500:
 
 ![covariance code](./Images/covarianceCode.png)
 
-Calculating Beta for Initial portfolio, sorting from lowest to highest:
-
+Calculating beta of raw portfolio stocks, sorting from lowest to highest in order to pick high beta stocks;
 ![beta](./Images/beta.png)
 
-Calculating Correlation of Initial portfolio to SP500
-
+Calculating correlation of raw portfolio to S&P500;
 ### correlation_of_portfolio = daily_returns.corr()
 
 ### correlation_of_portfolio
@@ -89,9 +88,11 @@ Calculating Correlation of Initial portfolio to SP500
 
 
 # Final portfolio selection: Low correlation to SP500 and High Beta metric from initial portfolio
-Using the lowest correlation to the market and highest beta from our initial 29 stock portfolio, we preselected 15 stocks. However, as an executive decision, we replaced 2 stocks. We removed PSX and SBUX, and added PFE and COST form our raw portfolio. We wanted to capitalize on Costco’s future growth and reduce all exposure to the Oil Industry Sector. Final stock selection from strategy: 
+Using the lowest market correlation and highest beta from our initial 28 stock portfolio, we selected 15 stocks. However, as an executive decision, we replaced 2 stocks. We removed PSX and SBUX, and added PFE and COST form our raw portfolio. We wanted to capitalize on Costco’s future growth and reduce all exposure to the Oil Industry Sector.
+Finally, we picked the 15 stocks below;
 AMT, ORCL, PPG, COST, MSFT, UNH, TROW, BLK, NVDA, FB, BABA, CRM, PFE, NFLX, SQ. 
-
+These stocks constituted the 60% of our final portfolio by allocating 4% to each stock.
+And the 40% left was invested in S&P 500. 
 ![portfolio selection](./Images/portfolioselection.png)
 
 ![portfolio strategy](./Images/portfoliostrategy.png)
@@ -108,7 +109,7 @@ AMT, ORCL, PPG, COST, MSFT, UNH, TROW, BLK, NVDA, FB, BABA, CRM, PFE, NFLX, SQ.
 
 There is a 95% chance that an initial investment of $10,000 in BKL strategy, will end within the range of $ 19,024.21  and $ 42,326.91. This represents 90.24% to 323.26% return in a 5 year period. 
 There is a 95% chance Expected Return of a $10,000 initial portfolio investing in SPY will end within the range of $ 7,019.96  and $ 38255.93. This represents -29.81% to 282.55% return in a 5 year period. 
-
+Based on the results of MC simulation, our portfolio is on average more likely to perform better than the S&P 500 for the next 5 years. 
 ## Sharpe Ratio
 
 ![sharpe ratio](./Images/sharperatioBLK_SP500.png)
