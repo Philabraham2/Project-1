@@ -20,9 +20,7 @@ To create our portfolio which will be compared against the S&P500, each team mem
 ## Is it possible to outperform the SP500?
 Based on our 5 years of historical data, the stocks that our team picked outperformed the S&P 500.
 We looked at the following comparisons to determine our portfolio performance against the SPY;
-- Sharpe ratio
-- 5 years of cumulative historical returns
-- 5 years of monte carlo simulation
+
 
 >>SPY historical vs BLK historical Portfolio
 
